@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Projeto | [Seu Nome]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="/">[Seu Nome]</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#experience">Experiência</a></li>
+                    <li><a href="projects.html" class="active">Projetos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <article class="project-detail">
+                <!-- Cabeçalho do Projeto -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">Sistemas Embarcados</span>
+                        <span class="project-date"><i class="far fa-calendar"></i> Jan 2023</span>
+                        <span class="project-duration"><i class="far fa-clock"></i> 6 meses</span>
+                    </div>
+                    <h1>Sistema de Monitoramento Inteligente</h1>
+                    <p class="project-excerpt">Solução IoT para monitoramento remoto de equipamentos industriais com análise preditiva.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>Python</span>
+                        <span>TensorFlow Lite</span>
+                    </div>
+                </header>
+
+                <!-- Conteúdo do Projeto -->
+                <div class="project-content">
+                    <figure class="project-featured-image">
+                        <img src="../assets/projects/project1-featured.jpg" alt="Sistema de Monitoramento Inteligente">
+                        <figcaption>Diagrama da arquitetura do sistema</figcaption>
+                    </figure>
+
+                    <h2>Contexto do Projeto</h2>
+                    <p>Desenvolvido para uma empresa de automação industrial, este sistema foi projetado para monitorar continuamente o estado de máquinas em ambientes fabris, identificando padrões que possam indicar falhas iminentes ou necessidades de manutenção.</p>
+
+                    <h2>Desafios Técnicos</h2>
+                    <ul>
+                        <li>Restrições de energia em dispositivos remotos</li>
+                        <li>Processamento de dados em tempo real com recursos limitados</li>
+                        <li>Integração com sistemas legados da fábrica</li>
+                        <li>Precisão na detecção de anomalias</li>
+                    </ul>
+
+                    <h2>Solução Implementada</h2>
+                    <p>Arquitetura em três camadas:</p>
+                    <ol>
+                        <li><strong>Dispositivos de borda:</strong> Microcontroladores com sensores dedicados</li>
+                        <li><strong>Gateway:</strong> Pré-processamento de dados e comunicação com a nuvem</li>
+                        <li><strong>Backend:</strong> Armazenamento e análise avançada</li>
+                    </ol>
+
+                    <div class="code-block">
+                        <h3>Exemplo de Código (Algoritmo de Análise)</h3>
+                        <pre><code class="language-cpp">
+// Exemplo simplificado do algoritmo de detecção de anomalias
+void analyzeSensorData(SensorData data) {
+    float threshold = calculateDynamicThreshold();
+    float currentValue = data.value;
+    
+    if (abs(currentValue - data.movingAvg) > threshold) {
+        triggerAlert(data.sensorId, currentValue);
+        logAnomaly(data);
+    }
+    
+    updateMovingAverage(data);
+}
+                        </code></pre>
+                    </div>
+
+                    <h2>Resultados Obtidos</h2>
+                    <div class="project-results">
+                        <div class="result-item">
+                            <div class="result-value">40%</div>
+                            <div class="result-label">Redução no consumo de energia</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">92%</div>
+                            <div class="result-label">Precisão na detecção de falhas</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">30ms</div>
+                            <div class="result-label">Latência máxima</div>
+                        </div>
+                    </div>
+
+                    <h2>Galeria do Projeto</h2>
+                    <div class="project-gallery">
+                        <img src="../assets/projects/project1-1.jpg" alt="Componentes eletrônicos">
+                        <img src="../assets/projects/project1-2.jpg" alt="Dashboard de monitoramento">
+                        <img src="../assets/projects/project1-3.jpg" alt="Dispositivo instalado">
+                    </div>
+
+                    <div class="project-navigation">
+                        <a href="#" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Projeto Anterior</a>
+                        <a href="projects.html" class="btn btn-outline">Ver Todos os Projetos</a>
+                        <a href="#" class="btn btn-outline">Próximo Projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> [Seu Nome]. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

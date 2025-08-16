@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Projetos | [Seu Nome]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="/">Vinicius Duarte</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#experience">Experiência</a></li>
+                    <li><a href="projects.html" class="active">Projetos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section">
+                <div class="projects-header">
+                    <h1>Meus Projetos</h1>
+                    <p>Uma coleção dos meus trabalhos mais relevantes em engenharia de computação.</p>
+                    <div class="projects-filter">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="embedded">Sistemas Embarcados</button>
+                        <button class="filter-btn" data-filter="iot">IoT</button>
+                        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                        <button class="filter-btn" data-filter="firmware">Firmware</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid extended">
+
+
+
+
+
+
+
+
+
+
+                    <!-- Projeto 1 -->
+                    <div class="project-card" data-category="embedded iot">
+                        <div class="project-image">
+                            <img src="assets/projects/sistema-irrigacao/projeto_sistemadeirrigação.jpg" alt="Sistema de Irrigação">
+                        </div>
+                        <div class="project-content">
+                            <h3>Sistema de Irrigação Inteligente com Monitoramente via Comunicação LORA</h3>
+                            <p>Sistema de irrigação inteligente que utiliza tecnologias de monitoramento e controle para otimizar o uso de recursos hídricos em plantações.</p>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar"></i> Mar 2023</span>
+                                <span class="project-duration"><i class="far fa-clock"></i> 8 meses</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>LORA</span>
+                                <span>Irrigação Inteligente</span>
+                                <span>Agricultura</span>
+                            </div>
+                            <a href="project-template.html?project=1" class="project-link">Ver detalhes →</a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Projeto 2 -->
+                    <div class="project-card" data-category="iot ml">
+                        <div class="project-image">
+                            <img src="assets/projects/posicionador/posicionador.jpg.png" alt="Plataforma de Edge Computing">
+                        </div>
+                        <div class="project-content">
+                            <h3>Posicionador para Módulo Fotovoltaico com Controle a Distância</h3>
+                            <p>Posicionador biaxial para painel fotovoltaico controlado de forma remota ou autônoma, conforme critérios do usuário. </p>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar"></i> Dez 2023</span>
+                                <span class="project-duration"><i class="far fa-clock"></i> 12 meses</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>ESP-NOW</span>
+                                <span>Geometria Solar</span>
+                                <span>Esp-32</span>
+                            </div>
+                            <a href="projeto-posicionador.html" class="project-link">Ver detalhes →</a>
+                        </div>
+                    </div>  
+
+
+
+
+
+
+
+
+
+
+                      <!-- Projeto 3 -->
+                    <div class="project-card" data-category="iot ml">
+                        <div class="project-image">
+                            <img src="assets/projects/snakegame/snake.png" alt="Plataforma de Edge Computing">
+                        </div>
+                        <div class="project-content">
+                            <h3>O Clássico Snake Game</h3>
+                            <p>Jogo da Cobrinha feito em C, utilizando de listas encadeadas para o corpo da cobra.</p>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar"></i> Ago 2022</span>
+                                <span class="project-duration"><i class="far fa-clock"></i> 4 meses</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>C</span>
+                                <span>Jogo da Cobrinha</span>
+                                <span>Listas Encadeadas</span>
+                            </div>
+                            <a href="project-template.html?project=2" class="project-link">Ver detalhes →</a>
+                        </div>
+                    </div>
+
+                      <!-- Projeto 4 -->
+                    <div class="project-card" data-category="iot ml">
+                        <div class="project-image">
+                            <img src="assets/projects/theskyes/theskyes.png" alt="Plataforma de Edge Computing">
+                        </div>
+                        <div class="project-content">
+                            <h3>The Skyes</h3>
+                            <p>Jogo 2d Procedural usando apenas caracateres ASCII, programado usando C++ puro.</p>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar"></i> Ago 2022</span>
+                                <span class="project-duration"><i class="far fa-clock"></i> 4 meses</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>C</span>
+                                <span>POO</span>
+                                <span>ASCII</span>
+                            </div>
+                            <a href="project-template.html?project=2" class="project-link">Ver detalhes →</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Adicione mais projetos conforme necessário -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span>viniciusbduarte. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
