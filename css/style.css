@@ -2,6 +2,9 @@
 /* Variáveis e Reset                                                          */
 /* ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
 :root {
     --primary-color: #2563eb;     /* Cor principal (azul) */
     --primary-dark: #1d4ed8;      /* Azul mais escuro para hover */
@@ -21,14 +24,15 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fonte base */
+    /*font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fonte base */
+    font-family: "Poppins";
     color: var(--text-color);    /* Cor do texto */
     background-color: var(--bg-color); /* Cor de fundo */
     line-height: 1.6;            /* Altura da linha para legibilidade */
 }
 
 .container {
-    max-width: 1200px;           /* Largura máxima */
+    max-width: 1400px;           /* Largura máxima */
     margin: 0 auto;              /* Centraliza na tela */
     padding: 0 20px;             /* Espaço lateral interno */
 }
@@ -122,7 +126,7 @@ a:hover {
 /* ========================================================================== */
 
 .header {
-    padding: 1.7rem 1.7rem;      /* Espaçamento interno */
+    padding: 1.7rem 0;      /* Espaçamento interno */
     position: relative;          /* Base para elementos posicionados */
     top: 0;                      /* Mantém no topo */
     background-color: var(--bg-color); /* Fundo branco */
@@ -131,7 +135,7 @@ a:hover {
 
 .nav {
     display: flex;               /* Layout flexível */
-    justify-content: space-between; /* Espaço entre marca e links */
+    justify-content: space-between ; /* Espaço entre marca e links */
     align-items: center;         /* Centraliza verticalmente */
 }
 
@@ -186,12 +190,12 @@ a:hover {
     flex-direction: row-reverse;
     align-items: center;         /* Centraliza verticalmente */
     min-height: 80vh;            /* Ocupa 80% da altura da tela */
-    padding: 4rem 0;             /* Espaço interno */
+    padding: 2rem 2rem;             /* Espaço interno */
 }
 
 .hero-content {
     flex: 1;                     /* Ocupa metade */
-    padding-right: 2rem;         /* Espaço da imagem */
+    padding-right: 2em;         /* Espaço da imagem */
 }
 
 .hero-subtitle {
@@ -357,7 +361,7 @@ a:hover {
     justify-content: center;
 }
 
-.project-content {
+.project-content{
     padding: 1.5rem;
 }
 
@@ -560,7 +564,7 @@ a:hover {
 }
 
 .project-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -603,6 +607,7 @@ figcaption {
     text-align: center;
 }
 
+
 .project-content h2 {
     margin: 2rem 0 1rem;
 }
@@ -631,7 +636,7 @@ figcaption {
     padding: 1rem 1.5rem;
     background-color: #252526;
     color: #d4d4d4;
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -803,7 +808,6 @@ pre {
 }
 
 .project-header {
-    margin-bottom: 3rem;
     text-align: center;
 }
 
@@ -867,6 +871,7 @@ figcaption {
     background-color: #1e1e1e;
     border-radius: 0.5rem;
     overflow: hidden;
+    font-size: 1rem;
     box-shadow: var(--shadow);
 }
 

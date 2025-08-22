@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Skyes | Vinicius Duarte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="/">Vinicius Duarte &lt;/&gt;</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#experience">Experiência</a></li>
+                    <li><a href="projects.html" class="active">Projetos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <article class="project-detail">
+                <!-- Cabeçalho do Projeto -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">Programação Orientada a Objetos</span>
+                        <span class="project-date"><i class="far fa-calendar"></i> 2025</span>
+                        <span class="project-duration"><i class="far fa-clock"></i> 1 semestre</span>
+                    </div>
+                    <h1>The Skyes – Jogo em C++ com ASCII Engine</h1>
+                    <p class="project-excerpt">
+                    Projeto desenvolvido para a disciplina de POO, explorando conceitos de encapsulamento, herança e polimorfismo em um jogo de aventura ASCII.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>POO</span>
+                        <span>ASCII Engine</span>
+                    </div>
+                </header>
+
+                <!-- Conteúdo do Projeto -->
+                <div class="project-content">
+                    <figure class="project-featured-image">
+                        <img src="../assets/projects/theskyes/teladejogo.png" alt="Tela do jogo The Skyes">
+                        <figcaption>Tela do jogo rodando em ASCII no terminal</figcaption>
+                    </figure>
+
+                    <h2>Contexto do Projeto</h2>
+                    <p><em>The Skyes</em> foi desenvolvido durante a disciplina de <strong>Programação Orientada a Objetos</strong>. O objetivo era aplicar conceitos de POO em um projeto prático, resultando em um jogo em C++ onde cada entidade (herói, inimigo, chave, baú, moedas) é modelada como uma classe independente. Para trabalhar com as sprites e os objetos de jogo, foi utilzada a Engine criada pelo professor 
+                    <a href="https://github.com/victorHSS/Cpp-ASCII-Game-Engine/tree/main/ASCII_Engine" target="_blank">Victor Oliveira</a>.</p>
+
+                    <h2>Conceitos de POO na Prática</h2>
+                    <ul>
+                        <li><strong>Encapsulamento:</strong> O herói controla internamente seus pontos de vida, usando métodos como <code>damage()</code>, <code>isAlive()</code> e <code>getHP()</code>.</li>
+                        <li><strong>Herança:</strong> Todas as entidades herdam de <code>ObjetoDeJogo</code>, aproveitando atributos e comportamentos comuns.</li>
+                        <li><strong>Polimorfismo:</strong> Objetos estáticos e animados compartilham a mesma interface de desenho <code>draw()</code>, permitindo tratamento genérico no loop de renderização.</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <h3>Exemplo de Encapsulamento (vida do herói)</h3>
+                        <pre><code class="language-cpp">
+if (hero.colideCom(inimigo) && podeLevarDano) {
+    hero.damage();   
+    podeLevarDano = false;
+    danoCooldown = 60;
+}
+                        </code></pre>
+                    </div>
+
+                    <h2>Soluções Implementadas</h2>
+                    <ol>
+                        <li><strong>Câmera dinâmica:</strong> sempre centraliza no herói, limitada aos limites do mapa.</li>
+                        <li><strong>HUD:</strong> corações representam vidas e a barra mostra o HP atual.</li>
+                        <li><strong>Objetos interativos:</strong> chave abre o baú, criando progressão.</li>
+                        <li><strong>Inimigos patrulhando:</strong> IA simples que se move entre dois limites.</li>
+                        <li><strong>Cooldown de dano:</strong> evita perda instantânea de todas as vidas.</li>
+                    </ol>
+
+                    <div class="code-block">
+                        <h3>Câmera acompanhando o herói</h3>
+                        <pre><code class="language-cpp">
+cameraLin = hero.getPosL() - CAM_HEIGHT / 2;
+cameraCol = hero.getPosC() - CAM_WIDTH / 2;
+
+cameraLin = std::clamp(cameraLin, 3, mapa.getAltura() - CAM_HEIGHT - 3);
+cameraCol = std::clamp(cameraCol, 3, mapa.getLarguraMax() - CAM_WIDTH - 3);
+
+camera.moveTo(cameraLin, cameraCol);
+                        </code></pre>
+                    </div>
+
+                    <div class="github-link">
+                        <a href="https://github.com/viniciusbduarte/theskyes-jogo" class="project-link">Acesse meu repositório no Github e veja mais detalhes →</a>
+                    </div>
+
+                    <h2>Resultados e Aprendizados</h2>
+                    <p>Com este projeto consegui consolidar:</p>
+                    <ul>
+                        <li>Estruturação de código em C++ orientado a objetos</li>
+                        <li>Uso de herança e polimorfismo para evitar duplicação de código</li>
+                        <li>Encapsulamento para garantir consistência dos objetos</li>
+                        <li>Aplicação prática de conceitos de jogos: câmera, colisão, HUD e progressão</li>
+                    </ul>
+
+                    <h2>Galeria do Projeto</h2>
+
+                    <div class="project-gallery">
+    
+                        <img src="../assets/projects/theskyes/teladejogo.png" alt="Heroi coletando moedas">
+                        <img src="../assets/projects/theskyes/menu.png" alt="Inimigo patrulhando o cenário">
+                    </div>
+
+                    <div class="project-navigation">
+                        <a href="#" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Projeto Anterior</a>
+                        <a href="projects.html" class="btn btn-outline">Ver Todos os Projetos</a>
+                        <a href="#" class="btn btn-outline">Próximo Projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Vinicius Duarte. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
