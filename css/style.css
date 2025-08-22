@@ -100,9 +100,10 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: var(--primary-dark); /* Fundo azul escuro */
-    border-color: var(--primary-dark);     /* Borda azul escura */
+    background-color: var(--text-light); /* Fundo azul escuro */
+    border-color: var(--text-light);     /* Borda azul escura */
     transform: translateY(-2px);           /* Elevação sutil */
+    color: white;
     box-shadow: var(--shadow);             /* Sombra */
 }
 
@@ -182,6 +183,7 @@ a:hover {
 
 .hero {
     display: flex;               /* Layout em duas colunas */
+    flex-direction: row-reverse;
     align-items: center;         /* Centraliza verticalmente */
     min-height: 80vh;            /* Ocupa 80% da altura da tela */
     padding: 4rem 0;             /* Espaço interno */
@@ -456,6 +458,12 @@ a:hover {
         display: block;
     }
 
+    .hero-image {
+        flex: 1;                                /* Outra metade */
+        justify-content: center;                /* Centraliza imagem */
+        align-items:start;                    /* Alinha verticalmente */
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -471,6 +479,12 @@ a:hover {
         justify-content: center;
     }
 
+    
+    .hero-image img {
+        width: 50%;                            /* A imagem ocupa o container */
+        height: auto;                           /* Mantém proporção */
+        object-fit: contain;                    /* Garante que não distorça */
+    }
     .about-content {
         flex-direction: column;
     }
